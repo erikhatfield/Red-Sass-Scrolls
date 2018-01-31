@@ -1,11 +1,13 @@
 # RED SASS SCROLLS - the README #
 
-## A NodeJS HTML5 app compiled and built upon Brunch.io's action packed package.
-
-* * *
+## This is a NodeJS HTML5 app compiled and built upon Brunch.io's action packed package.
 
 ### What the project does
 This project is intended as an example of my coding styles, best practices and graphic design sense, as well as general UX- *'what am I even looking at?'*
+
+* * *
+
+### What the project is
 
 #### Technical:
 1. __HTML5__
@@ -61,7 +63,7 @@ Using the built code in the 'public' dir, I will host a static demo site. _Comin
 * Emojii codes from: [Complete list of github markdown emoji markup](https://gist.github.com/rxaviers/7360908)
 * Art with character [ASCII Art generator](http://patorjk.com/software/taag/)
 
-######END FILE: double horizontal line, random thought?, and new line
+###### END FILE: double horizontal line, random thought?, and new line
 * * *
 * * *
 isn't *smug* short for *Smiley Mug*?
