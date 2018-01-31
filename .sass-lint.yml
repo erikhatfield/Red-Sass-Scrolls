@@ -1,0 +1,17 @@
+#   Sample Configs
+#     - https://github.com/sasstools/sass-lint/blob/develop/docs/sass-lint.yml
+#     - https://github.com/sasstools/gulp-sass-lint/blob/master/tests/.sass-lint.yml
+
+#   Sass Lint Rules
+#     - https://github.com/sasstools/sass-lint/tree/develop/docs/rules
+
+#   Severity
+#     - 0: turns rule off
+#     - 1: set as a warning
+#     - 2: set to error
+rules:
+  no-ids: 0
+  indentation:
+    - 1
+    -
+      size: 'tab'

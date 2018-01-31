@@ -1,0 +1,395 @@
+@font-face {
+	font-family: 'SHKODER 1989';
+	src: url('../typog/shkoder1989/blk/Shkoder_1989_Black.eot');
+	src: url('../typog/shkoder1989/blk/Shkoder_1989_Black.eot?#iefix') format('embedded-opentype'),
+	url('../typog/shkoder1989/blk/Shkoder_1989_Black.woff') format('woff'),
+	url('../typog/shkoder1989/blk/Shkoder_1989_Black.ttf')  format('truetype'),
+	url('../typog/shkoder1989/blk/Shkoder_1989_Black.svg#c227bd4a80b39278d1ca442caf1a23c2') format('svg');     
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'SHKODER 1989';
+	src: url('../typog/shkoder1989/lit/Shkoder_1989_Light.eot');
+	src: url('../typog/shkoder1989/lit/Shkoder_1989_Light.eot?#iefix') format('embedded-opentype'),
+	url('../typog/shkoder1989/lit/Shkoder_1989_Light.woff') format('woff'),
+	url('../typog/shkoder1989/lit/Shkoder_1989_Light.ttf')  format('truetype'),
+	url('../typog/shkoder1989/lit/Shkoder_1989_Light.svg#5908d5e4a26b9f3f2247dd1a40b01b2a') format('svg');     
+	font-style: normal;
+	font-weight: 200;
+}
+@font-face {
+	font-family: 'Heebo Thin';
+	src: url('../typog/pale-hebrew/Heebo-Thin_Paleo.eot');
+	src: url('../typog/pale-hebrew/Heebo-Thin_Paleo.eot?#iefix') format('embedded-opentype'),
+	url('../typog/pale-hebrew/Heebo-Thin_Paleo.woff') format('woff'),
+	url('../typog/pale-hebrew/Heebo-Thin_Paleo.ttf')  format('truetype'),
+	url('../typog/pale-hebrew/Heebo-Thin_Paleo.svg#3871f0234936d915bd652dc213932212') format('svg');	   
+	font-style: normal;
+	font-weight: 200;
+}
+
+.paleo-hebrew {
+	font-family: 'Heebo Thin';
+	font-weight:  200;
+}
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+$base-color: #333;  
+$hilight-color: #ff0000;
+
+*{
+	box-sizing: border-box;
+}
+html {
+	color: $base-color;
+	font-size: 2em;
+	line-height: 1.4;
+	font-family: 'SHKODER 1989';
+	font-weight: 200;
+}
+body {
+	margin:0;
+}
+h1 {
+	font-size: 3.4em;
+	line-height:1.1;
+}
+h1 small {
+	color: darken($hilight-color, 10%);
+	display: block;
+	font-size: 44%;
+}
+h2 {
+	
+}
+h6,
+small {
+	font-weight: 200;
+}
+big {
+	font-size: 400%;
+}
+
+/*
+ * Anchor Pseudo-classes
+ * Must be in specific order of :link, :visited, :hover, :active to work 
+ */
+ 
+a:link {
+    color: darken($hilight-color, 4%);
+}
+
+a:visited {
+    color: darken($hilight-color, 14%);
+}
+
+a:hover {
+    color: darken($hilight-color, 11%);
+}
+
+a:active {
+    color: lighten($hilight-color, 3%);
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+	background: darken($hilight-color, 11%);
+	text-shadow: none;
+}
+
+::selection {
+	background: darken($hilight-color, 11%);
+	text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.frameworks{
+	position:relative;
+	display:block;
+	width:100%;
+}
+.flexbox-50{
+	min-width: 245px;
+	width:50%;
+	float:left;
+	padding: 0 4% 0 1%;
+	border-left:1px dashed lighten($hilight-color, 14%); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * align text from right to left - ain't shint C-Squirrel style 
+ */
+
+.rtl {
+	direction: rtl;
+}
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+	display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *	causes content to wrap 1 word per line:
+ *	https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	-webkit-clip-path: none;
+	clip-path: none;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+	white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+	visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *	`contenteditable` attribute is included anywhere else in the document.
+ *	Otherwise it causes space to appear at the top and bottom of elements
+ *	that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *	`:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+	content: ' '; /* 1 */
+	display: table; /* 2 */
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+	/* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+	   (-webkit-min-device-pixel-ratio: 1.25),
+	   (min-resolution: 1.25dppx),
+	   (min-resolution: 120dpi) {
+	/* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+	*,
+	*:before,
+	*:after {
+		background: transparent !important;
+		color: #000 !important; /* Black prints faster:
+								   http://www.sanbeiji.com/archives/953 */
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+
+	a[href]:after {
+		content: ' (' attr(href) ')';
+	}
+
+	abbr[title]:after {
+		content: ' (' attr(title) ')';
+	}
+
+	/*
+	 * Don't show links that are fragment identifiers,
+	 * or use the `javascript:` pseudo protocol
+	 */
+
+	a[href^='#']:after,
+	a[href^='javascript:']:after {
+		content: '';
+	}
+
+	pre {
+		white-space: pre-wrap !important;
+	}
+	
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+
+	/*
+	 * Printing Tables:
+	 * http://css-discuss.incutio.com/wiki/Printing_Tables
+	 */
+
+	thead {
+		display: table-header-group;
+	}
+
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+}

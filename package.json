@@ -1,0 +1,26 @@
+{
+  "name": "red-sass-scrolls",
+  "description": "sass-lint CSS with jQuery onScroll powered CSS3 transitions",
+  "private": true,
+  "author": "ehatfield",
+  "version": "1.3.4",
+  "repository": "",
+  "scripts": {
+    "start": "LOGGY_STACKS=true brunch watch --server",
+    "build": "brunch build --production"
+  },
+  "dependencies": {
+    "jquery": "^3.3"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2",
+    "babel-brunch": "^6",
+    "babel-preset-latest": "^6",
+    "babel-preset-stage-0": "^6",
+    "brunch": "^2",
+    "pleeease-brunch": "^3",
+    "sass-brunch": "^2",
+    "sass-lint-brunch": "^1.1.0",
+    "uglify-js-brunch": "^2"
+  }
+}

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'SHKODER 1989';
+  src: url('Shkoder_1989_Black.eot'); /* IE9 Compat Modes */
+  src: url('Shkoder_1989_Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Shkoder_1989_Black.woff') format('woff'), /* Modern Browsers */
+       url('Shkoder_1989_Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Shkoder_1989_Black.svg#c227bd4a80b39278d1ca442caf1a23c2') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+

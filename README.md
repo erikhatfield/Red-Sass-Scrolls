@@ -5,22 +5,22 @@
 * * *
 
 ### What the project does
-This project is intended as an example of my coding styles, best practices and graphic design sense, as well as general UX- 'what am I looking at?'.
+This project is intended as an example of my coding styles, best practices and graphic design sense, as well as general UX- *'what am I even looking at?'*
 
-#### Technical
+#### Technical:
 1. __HTML5__
 2. __CSS3__ - compiled from Sass/SCSS
 3. __Javascript__ - ECMAScript 2015 (ECMAScript 6)
 4. __jQuery__ 3.3
 5. __NodeJS__ and __NPM__ with Brunch.io - Code linting, watching, minifing, and optimizing.
 
-#### Creative
+#### Creative:
 1. __Graphic Design__ - beautiful and simple GUI
 2. __Interactive Design__ - transitions and animations
 3. __User Experience__ - works beautifully, feels good
 4. __Web-fonts__ - community sourced typography
 	* _Shkoder 1986_ - Edgy triangular 1980s style authored by [Julian](https://www.behance.net/julianhxh) and [Ana](https://www.behance.net/anahoxha) :two_hearts:
-	* _Heebo Thin_ - nice light-weight font with __Bonus:__ :abcd: Paleo Hebrew alphabet characters and symbols. Font provided by [hsahdfsh](https://fdsdfs) with inspiration provided by the Dead Sea Squirrels... -err i mean - Scrolls :squirrel:
+	* _Heebo Thin_ - nice light-weight font with __Bonus:__ :abcd: [Paleo Hebrew](https://en.wikipedia.org/wiki/Paleo-Hebrew_alphabet) alphabet characters and symbols. Font provided by [edenberger](https://github.com/edenberger/Paleo-Hebrew-Heebo-Font) :thumbsup: with inspiration provided by the Dead Sea Squirrels... -err i mean - Scrolls :squirrel:
 
 ## Live Demo (coming soon to a url near you)
 Using the built code in the 'public' dir, I will host a static demo site. _Coming Soon!_ - 013018:date:
@@ -58,3 +58,7 @@ Using the built code in the 'public' dir, I will host a static demo site. _Comin
 * Emojii codes from: [Complete list of github markdown emoji markup](https://gist.github.com/rxaviers/7360908)
 * Art with character [ASCII Art generator](http://patorjk.com/software/taag/)
 
+END FILE: double horizontal line, random thought?, and new line
+* * *
+* * *
+is *smug* short for *Smiley Mug*?

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Heebo Thin';
+  src: url('Heebo-Thin_Paleo.eot'); /* IE9 Compat Modes */
+  src: url('Heebo-Thin_Paleo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Heebo-Thin_Paleo.woff') format('woff'), /* Modern Browsers */
+       url('Heebo-Thin_Paleo.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Heebo-Thin_Paleo.svg#3871f0234936d915bd652dc213932212') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+

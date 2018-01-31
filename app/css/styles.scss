@@ -1,0 +1,235 @@
+$_section-count: 8;
+
+/*
+**(_COLORS:)_								*/
+$base-color: #fff;
+$verbose-base: #ff0000;
+//spectrum end-points (left and right)
+$spectrum-left: #000;
+$spectrum-right: #fff;
+
+/*
+**(_CUBIC BEZIER EASING CURVES:)_			*/
+$ease-out-mega: cubic-bezier(.11,1,.33,1);
+
+%relatively-common {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+#nonScroll {
+	background-color: darken($verbose-base, 11%);
+	height: 100vh;
+	position: fixed;
+	width: 100%;
+}
+
+#mainScrolls {
+	@extend %relatively-common;
+	z-index: 1;
+}
+
+#mainScrolls > section {
+	@extend %relatively-common;
+	z-index: 3;
+	background-color: $spectrum-right;
+	height: auto;
+	min-height: 100vh;
+}
+
+#mainScrolls > section > div,
+#mainScrolls > section > div > div {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	pointer-events: none;
+}
+
+#mainScrolls > section > div {
+	height: 100%;
+	z-index: -2;
+}
+
+#mainScrolls > section > div > div {
+	top: 0;
+	width: 25%;
+	left: 25%;
+	background: transparent;
+	-webkit-transition:top 3300ms $ease-out-mega;
+	transition:top 3300ms $ease-out-mega;
+}
+
+@for $i from 1 through 4 {
+	#mainScrolls > section > div > div:nth-child(#{$i}) {
+		left: ($i - 1) * 25%;
+	}
+}
+
+#mainScrolls > section.active {
+	border-bottom: 1px dashed transparentize($verbose-base, .5);
+}
+
+#mainScrolls > section.active-next {
+	border-bottom: 1px dotted transparentize($verbose-base, .5);
+}
+
+#mainScrolls > section::after {
+	bottom: 15%;
+	width: 23%;
+	text-align: right;
+	display: block;
+	left: 1%;
+	position: absolute;
+}
+
+$inverted: $spectrum-left;
+@for $i from 1 through $_section-count {
+	$inverted: invert($inverted);
+
+	#mainScrolls > section:nth-child(#{$i}) {//use nth-child mod operator to recycle styles
+		background-color: desaturate($inverted, 50%);
+		color: desaturate(invert($inverted), 50%);
+	}
+
+	#mainScrolls > section:nth-child(#{$i}) > div > div {
+		background-color: desaturate($inverted, 50%);
+		border-right: 1px dotted transparentize(desaturate(invert($inverted), 50%), .9);
+	}
+
+	#mainScrolls > section:nth-child(#{$i})::after {
+		content: '.0#{$i}^ ';
+		font-size: ((.05 * $i) * 11em);
+	}
+}
+
+.article {
+	top: 0;
+	position: relative;
+	z-index: 11;
+	margin: 0;
+	padding: 5% 12.5% 37.5%;
+	-webkit-transition:top 3300ms $ease-out-mega;
+	transition:top 3300ms $ease-out-mega;
+}
+
+.center-stage {
+	text-align: center;
+}
+
+.figure {
+	display: inline-block;
+	position: relative;
+	padding: 5%;
+	margin: 10% 0;
+	border: 1px solid transparentize($spectrum-left, .86);
+	background: $spectrum-right;
+	text-align: center;
+}
+
+.figure::before {
+	content: ' ';
+	position: absolute;
+	z-index: -1;
+	display:block;
+	width: 300%;
+	left: -100%;
+	height: 1%;
+	top: 77%;
+	background: transparent;
+	border: 1px solid transparentize($spectrum-left, .86);
+	border-left: 0;
+	border-right: 0;
+}
+
+.figure img {
+	width: 50%;
+	height: auto;
+}
+
+//scrollVisualizer
+#scrollVisualizer {
+	position: fixed;
+	display: block;
+	z-index: 101;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	min-width: 4px;
+	width: .5%;
+	height: 100%;
+	background-color: transparentize($verbose-base, .420);
+}
+
+#scrollVisualizer > div {
+	@extend %relatively-common;
+	height: 11px;
+	overflow: hidden;
+	background-color: transparentize($base-color, .33);
+	border-bottom: 1px solid transparentize($spectrum-left, .11);
+}
+
+@for $i from 1 through $_section-count {
+	#scrollVisualizer > div:nth-child(#{$i}) {//use nth-child mod operator to recycle styles
+		opacity: ($i * .07);
+	}
+}
+
+#scrollLocation {
+	background-color: transparentize($verbose-base, .4);
+	border: 1px solid transparentize(darken($spectrum-right, 33%), .5);
+	border-radius: 0 33px;
+	display: block;
+	height: 33px;
+	left: 25%;
+	position: absolute;
+	top: 50%;
+	width: 150%;
+}
+
+//verbose scroll event data reader
+#verboseReader {
+	background: $verbose-base;
+	bottom: 0;
+	display: block;
+	min-width: 160px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 20%;
+	z-index: 101;
+}
+
+#verboseReader > section {
+	background: $verbose-base;
+	border: 3px dotted $spectrum-left;
+	left: 5%;
+	padding: 5%;
+	position: fixed;
+	top: 5%;
+	transform: scale(.16);
+	transform-origin: 100% 0;
+	width: 90%;
+}
+
+@for $i from 1 through 3 {
+
+	#verboseReader > section:nth-child(#{$i}) {
+		top: ($i * 20%);
+	}
+}
+
+#verboseReader > section h2 {
+	font-size: 3rem;
+	margin: 0;
+}
+
+#verboseReader > section.read {
+	border: 1px dotted $spectrum-right;
+	height: 90%;
+	overflow-y: scroll;
+	top: 5%;
+	transform: scale(1);
+}
