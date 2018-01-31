@@ -2,12 +2,14 @@
 
 ## This is a NodeJS HTML5 app compiled and built upon Brunch.io's action packed package.
 
+A horizontal-scrolling UI with stylesheets compiled with Sass/SCSS and syntax influenced by sass-lint. <span style="color:maroon">And of course, a GUI that borrows some of the R from RGB.</span>
+
 ### What the project does
 This project is intended as an example of my coding styles, best practices and graphic design sense, as well as general UX- *'what am I even looking at?'*
 
 * * *
 
-### What the project is
+### Areas of Discipline 
 
 #### Technical:
 1. __HTML5__
