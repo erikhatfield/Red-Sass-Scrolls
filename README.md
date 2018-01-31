@@ -2,7 +2,7 @@
 
 ## This is a NodeJS HTML5 app compiled and built upon Brunch.io's action packed package.
 
-A horizontal-scrolling UI with stylesheets compiled with Sass/SCSS and syntax influenced by sass-lint. <span style="color:maroon">And of course, a GUI that borrows some of the R from RGB.</span>
+A horizontal-scrolling UI with stylesheets compiled with Sass/SCSS and syntax influenced by sass-lint. And of course, a GUI that borrows some of the R from RGB. :diamonds::diamonds:
 
 ### What the project does
 This project is intended as an example of my coding styles, best practices and graphic design sense, as well as general UX- *'what am I even looking at?'*
@@ -64,6 +64,11 @@ Using the built code in the 'public' dir, I will host a static demo site. _Comin
 * Sass-lint config & rules: [Sample sass-lint.yml](https://github.com/sasstools/sass-lint/blob/develop/docs/sass-lint.yml) & [Rules Documentation](https://github.com/sasstools/sass-lint/tree/develop/docs/rules)
 * Emojii codes from: [Complete list of github markdown emoji markup](https://gist.github.com/rxaviers/7360908)
 * Art with character [ASCII Art generator](http://patorjk.com/software/taag/)
+
+
+
+
+
 
 ###### END FILE: double horizontal line, random thought?, and new line
 * * *
