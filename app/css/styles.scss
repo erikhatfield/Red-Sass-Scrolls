@@ -4,13 +4,24 @@ $_section-count: 8;
 **(_COLORS:)_								*/
 $base-color: #fff;
 $verbose-base: #ff0000;
+$grid-color: rgba(133, 33, 33, .33);
 //spectrum end-points (left and right)
 $spectrum-left: #000;
 $spectrum-right: #fff;
 
 /*
 **(_CUBIC BEZIER EASING CURVES:)_			*/
-$ease-out-mega: cubic-bezier(.11,1,.33,1);
+$time: 2200ms;
+$super-ease-o: cubic-bezier(.11,1,.33,1);
+
+/*
+**(_GRID SPECS:)_			*/
+$grid-sq: 1.420em;
+$grid-stroke: .1em;
+$grid-size: 177vmax;
+$grid-z: $grid-sq * 5;
+$grid-gradient: $grid-color $grid-stroke, transparent 0;
+
 
 %relatively-common {
 	display: block;
@@ -19,15 +30,44 @@ $ease-out-mega: cubic-bezier(.11,1,.33,1);
 }
 
 #nonScroll {
-	background-color: darken($verbose-base, 11%);
-	height: 100vh;
 	position: fixed;
 	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	height: 100vh;
+	perspective: 65em;
+	perspective-origin: 50% calc(50% - 11em);
+	background: $base-color;
+	//background-color: darken($verbose-base, 11%);
+}
+
+#nonScroll div {
+	position: absolute;
+	top: 50%; left: 50%;
+	transform-style: preserve-3d;
+}
+
+.grid-3d {
+	transform: rotateY(-45deg) translate3d(-8*$grid-sq, $grid-sq, -2*$grid-sq);
+}
+
+.horizon {
+	margin: -.5*$grid-size;
+	width: $grid-size; height: $grid-size;
+	transform: 
+		rotateX(90deg) translateZ(-.5*$grid-z);
+	background: 
+		radial-gradient(rgba(255, 255, 255, 0) 34%, $base-color 77%), 
+		linear-gradient($grid-gradient), 
+		linear-gradient(90deg, $grid-gradient);
+	background-position: 50% 50%;
+	background-size: 100%, $grid-sq $grid-sq, $grid-sq $grid-sq;
 }
 
 #mainScrolls {
 	@extend %relatively-common;
 	z-index: 1;
+	overflow-x: hidden;
 }
 
 #mainScrolls > section {
@@ -37,6 +77,7 @@ $ease-out-mega: cubic-bezier(.11,1,.33,1);
 	height: auto;
 	min-height: 100vh;
 }
+
 
 #mainScrolls > section > div,
 #mainScrolls > section > div > div {
@@ -51,15 +92,19 @@ $ease-out-mega: cubic-bezier(.11,1,.33,1);
 #mainScrolls > section > div {
 	height: 100%;
 	z-index: -2;
+	display:none;
 }
-
+#mainScrolls > section.active > div,
+#mainScrolls > section.active-next > div {
+	display: block;
+}
 #mainScrolls > section > div > div {
 	top: 0;
 	width: 25%;
 	left: 25%;
 	background: transparent;
-	-webkit-transition:top 3300ms $ease-out-mega;
-	transition:top 3300ms $ease-out-mega;
+	-webkit-transition:top $time $super-ease-o;
+	transition:top $time $super-ease-o;
 }
 
 @for $i from 1 through 4 {
@@ -89,7 +134,7 @@ $inverted: $spectrum-left;
 @for $i from 1 through $_section-count {
 	$inverted: invert($inverted);
 
-	#mainScrolls > section:nth-child(#{$i}) {//use nth-child mod operator to recycle styles
+	#mainScrolls > section:nth-child(#{$i}) {//use nth-child mod operator or even/odd prop instead- self
 		background-color: desaturate($inverted, 50%);
 		color: desaturate(invert($inverted), 50%);
 	}
@@ -105,14 +150,24 @@ $inverted: $spectrum-left;
 	}
 }
 
+#mainScrolls > section:nth-child(1) {
+	background-color: transparent;
+}
+
+/*
+#mainScrolls > section:last-child {
+	margin-bottom: 77vh;
+}
+*/
+
 .article {
 	top: 0;
 	position: relative;
 	z-index: 11;
 	margin: 0;
 	padding: 5% 12.5% 37.5%;
-	-webkit-transition:top 3300ms $ease-out-mega;
-	transition:top 3300ms $ease-out-mega;
+	-webkit-transition: top $time $super-ease-o;
+	transition: top $time $super-ease-o;
 }
 
 .center-stage {

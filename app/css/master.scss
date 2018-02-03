@@ -63,11 +63,7 @@ body {
 h1 {
 	font-size: 3.4em;
 	line-height:1.1;
-}
-h1 small {
-	color: darken($hilight-color, 10%);
-	display: block;
-	font-size: 44%;
+	margin-top: 1.4em;
 }
 h2 {
 	
@@ -75,6 +71,9 @@ h2 {
 h6,
 small {
 	font-weight: 200;
+	color: darken($hilight-color, 7%);
+	display: block;
+	font-size: 67%;
 }
 big {
 	font-size: 400%;

@@ -39,12 +39,11 @@ $( document ).ready(function(event) {
 		var $topset = 1 * (win.scrollY - sections[index].offsetTop);
 		var $topset2 = (sections[j].offsetTop - win.scrollY);
 		
-		sections[index].querySelector('article').setAttribute('style', 'top: -' + ($topset /4) + "px");
+		//sections[index].querySelector('article').setAttribute('style', 'top: -' + ($topset /4) + "px");
 		sections[j].querySelector('article').setAttribute('style', 'top: -' + ($topset2 /8) + "px");
 		
 		sections[j].querySelector('div>div').setAttribute('style', 'top: -' + ($topset * .2) + "px");
 		sections[j].querySelector('div>div').nextElementSibling.setAttribute('style', 'top: -' + ($topset * .4) + "px");
-		
 		sections[j].querySelector('div>div').nextElementSibling.nextElementSibling.setAttribute('style', 'top: -' + ($topset * .8) + "px");
 		sections[j].querySelector('div>div').nextElementSibling.nextElementSibling.nextElementSibling.setAttribute('style', 'top: -' + ($topset * 1.6) + "px");
 		
