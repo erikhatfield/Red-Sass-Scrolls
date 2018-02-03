@@ -38,7 +38,7 @@ $grid-vertical-gradient: rgba(255, 255, 255, 0) 0, darken($verbose-base, 7%) 100
 	perspective: 65em;
 	perspective-origin: 50% calc(50% - 11em);
 	background: $base-color;
-	//////background-color: darken($verbose-base, 11%);
+	////////background-color: darken($verbose-base, 11%);
 }
 
 #nonScroll div {
