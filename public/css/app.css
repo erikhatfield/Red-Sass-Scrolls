@@ -500,11 +500,6 @@ textarea {
 #mainScrolls > section:nth-child(1) {
   background-color: transparent; }
 
-/*
-#mainScrolls > section:last-child {
-	margin-bottom: 77vh;
-}
-*/
 .article {
   top: 0;
   position: relative;
