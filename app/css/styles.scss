@@ -21,7 +21,7 @@ $grid-stroke: .1em;
 $grid-size: 177vmax;
 $grid-z: $grid-sq * 5;
 $grid-gradient: $grid-color $grid-stroke, transparent 0;
-$grid-vertical-gradient: rgba(255, 255, 255, 0) 0, $verbose-base 100%;
+$grid-vertical-gradient: rgba(255, 255, 255, 0) 0, darken($verbose-base, 7%) 100%;
 
 %relatively-common {
 	display: block;
@@ -95,10 +95,12 @@ $grid-vertical-gradient: rgba(255, 255, 255, 0) 0, $verbose-base 100%;
 	z-index: -2;
 	display:none;
 }
+
 #mainScrolls > section.active > div,
 #mainScrolls > section.active-next > div {
 	display: block;
 }
+
 #mainScrolls > section > div > div {
 	top: 0;
 	width: 25%;
