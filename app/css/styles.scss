@@ -21,7 +21,7 @@ $grid-stroke: .1em;
 $grid-size: 177vmax;
 $grid-z: $grid-sq * 5;
 $grid-gradient: $grid-color $grid-stroke, transparent 0;
-
+$grid-vertical-gradient: rgba(255, 255, 255, 0) 0, $verbose-base 100%;
 
 %relatively-common {
 	display: block;
@@ -59,9 +59,10 @@ $grid-gradient: $grid-color $grid-stroke, transparent 0;
 	background: 
 		radial-gradient(rgba(255, 255, 255, 0) 34%, $base-color 77%), 
 		linear-gradient($grid-gradient), 
-		linear-gradient(90deg, $grid-gradient);
+		linear-gradient(90deg, $grid-gradient), 
+		linear-gradient(135deg, $grid-vertical-gradient);
 	background-position: 50% 50%;
-	background-size: 100%, $grid-sq $grid-sq, $grid-sq $grid-sq;
+	background-size: 100%, $grid-sq $grid-sq, $grid-sq $grid-sq, 100%;
 }
 
 #mainScrolls {
