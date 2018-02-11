@@ -205,7 +205,21 @@ textarea {
 
 
 
+/*
+ * align text from right to left - ain't shint C-Squirrel style 
+ */
 
+.arrow-before:before {
+	content: ' ↳ ';
+	font-family: 'Apple SD Gothic Neo Regular', 'Arial Unicode MS';
+	font-size: 200%;
+	line-height:0.333;
+	position: absolute;
+	display:block;
+	width:110px;
+	margin-left:-110px;
+	color: darken($hilight-color, 33%);
+}
 
 /* ==========================================================================
    Helper classes

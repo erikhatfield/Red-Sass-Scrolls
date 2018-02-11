@@ -182,6 +182,20 @@ $(document).ready(function (event) {
 	}, 250);
 
 	function rawScrollHandler() {
+		/*
+  	this needs to be über fast and clever since it is called alot while the user scrolls the page.
+  	-__-
+  		IDEA0: an array of the html elements that will be needed is pre assembled outside of this function,
+  		initally on page load and then again when needed, say on window resize event or orientation change.
+  		the array is indexed by the topOffset pixel number.
+  		
+  			the function itself then uses a switch statement based on a range (where the page is) to quickly locate the active elements to tweek.
+  			~ ELH 020318
+  	_  _
+  	 --
+  */
+
+		//clean up- improve the rough draft/proof of concept asap pls.
 		var $topPercent = win.pageYOffset / $("#mainScrolls").height() * 100 + "%";
 		$("#scrollLocation").css('top', $topPercent);
 
