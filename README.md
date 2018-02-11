@@ -1,4 +1,4 @@
-# RED SASS SCROLLS - the README #
+# RED SCSS SCROLLS - the README #
 
 ## This is a NodeJS HTML5 app compiled and built upon Brunch.io's action packed package.
 
@@ -66,11 +66,3 @@ Using the built code in the 'public' dir, I will host a static demo site. _Comin
 * Art with character [ASCII Art generator](http://patorjk.com/software/taag/)
 
 
-
-
-
-
-###### END FILE: double horizontal line, random thought?, and new line
-* * *
-* * *
-isn't *smug* short for *Smiley Mug*?
