@@ -54,9 +54,9 @@ $grid-vertical-gradient: rgba(255, 255, 255, 0) 0, darken($verbose-base, 7%) 100
 .horizon {
 	margin: -.5*$grid-size;
 	width: $grid-size; height: $grid-size;
-	transform: 
+	transform:
 		rotateX(90deg) translateZ(-.5*$grid-z);
-	background: 
+	background:
 		radial-gradient(rgba(255, 255, 255, 0) 34%, $base-color 77%), 
 		linear-gradient($grid-gradient), 
 		linear-gradient(90deg, $grid-gradient), 
@@ -93,7 +93,7 @@ $grid-vertical-gradient: rgba(255, 255, 255, 0) 0, darken($verbose-base, 7%) 100
 #mainScrolls > section > div {
 	height: 100%;
 	z-index: -2;
-	display:none;
+	display: none;
 }
 
 #mainScrolls > section.active > div,
